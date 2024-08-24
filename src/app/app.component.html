@@ -1,0 +1,17 @@
+<div>
+  <h1>Calculadora</h1>
+  <label for="numero1">Número 1:</label>
+  <input type="number" [(ngModel)]="numero1" id="numero1">
+  <br>
+  <br>
+  <label for="numero2">Número 2:</label>
+  <input type="number" [(ngModel)]="numero2" id="numero2">
+  
+  <app-calculadora [numero1]="numero1" [numero2]="numero2" (resultado)="actualizarResultado($event)"></app-calculadora>
+  
+  <!-- <h2>Resultado: {{ resultado }}</h2> -->
+
+  <app-resultado [resultado]="resultado"></app-resultado>
+
+
+</div>
